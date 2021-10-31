@@ -1,0 +1,46 @@
+name: Continuous Integration & Delivery Workflow
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i
+
+  deployment:
+    name: Deployment
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm run build
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
+          known_hosts: "to-avoid-error"
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SERVER_SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Enviando arquivos de publicação para o servidor
+        run: rsync --archive --verbose --compress --recursive --delete-excluded dist ${{ secrets.SERVER_SSH_USER }}@${{ secrets.SERVER_SSH_HOST }}:/var/www/html
