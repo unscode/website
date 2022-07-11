@@ -21,8 +21,11 @@ const styles: Styles = {
 const Navbar: ComponentSingleStyleConfig = {
     baseStyle: ({ colorMode }) => ({
         top: 0,
+        py: 4,
+        width: "100%",
         background: colorMode === "light" ? "white" : "black",
-        position: "sticky",
+        //position: "sticky",
+        position: "fixed",
         zIndex: 999
     }),
 }
