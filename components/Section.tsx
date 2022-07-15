@@ -1,6 +1,6 @@
-import { Box, ChakraProps, useStyleConfig } from "@chakra-ui/react";
+import { Box, BoxProps, useStyleConfig } from "@chakra-ui/react";
 
-interface SectionProps extends ChakraProps {
+export interface SectionProps extends BoxProps {
   children?: React.ReactNode;
 }
 
