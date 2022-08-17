@@ -7,13 +7,14 @@ export default function Advantage(props: SectionProps) {
   return (
     <Section {...props}>
       <Container maxW="container.xl">
-        <Flex alignItems="center" justifyContent="space-between">
+        <Flex py={8} alignItems="center" justifyContent="space-between">
           <Box
             p={5}
+            w={["40%"]}
             borderWidth={5}
             borderColor="currentColor"
             borderRightWidth={0}
-            w={["35%"]}
+            lineHeight={2}
             position="relative"
             _after={{
               top: 0,
@@ -25,7 +26,7 @@ export default function Advantage(props: SectionProps) {
               position: "absolute",
             }}
           >
-            <Heading as="h4" size="md" mb={4} color="#fe735e">
+            <Heading as="h3" size="lg" mb={4} color="#fe735e">
               Vantagens de Trabalhar com a nossa equipe de TI
             </Heading>
             Oferecemos entrega confiável e eficiente com engenheiros de alta

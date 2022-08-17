@@ -19,10 +19,14 @@ export default function Layout({ children }: LayoutProps) {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
-        />
+        /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <Navbar />
       <main>{children}</main>

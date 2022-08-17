@@ -10,8 +10,8 @@ const styles: Styles = {
     global: ({ colorMode }: GlobalStyleProps) => ({
         body: {
             background: colorMode === "light" ? "white" : "black",
-            //fontFamily: "'Lato', sans-serif"
-            fontFamily: "'Nunito', sans-serif"
+            fontFamily: "'Lato', sans-serif"
+            //fontFamily: "'Nunito', sans-serif"
         },
         "*::placeholder": {
             color: colorMode === "light" ? "gray.600" : "gray.400",

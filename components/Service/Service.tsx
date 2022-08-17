@@ -51,15 +51,29 @@ export default function Service(props: SectionProps) {
             borderRight="2px solid"
           >
             <Box mb={8}>
-              <Icon
-                as={MdMemory}
-                boxSize={16}
+              <Box
                 mb={6}
                 p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdMemory}
+                  boxSize={16}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 Engenharia de Produto E Design de Experiência
               </Heading>
@@ -110,15 +124,29 @@ export default function Service(props: SectionProps) {
             pb={0}
           >
             <Box mb={8}>
-              <Icon
-                as={MdDevicesOther}
-                boxSize={16}
+              <Box
                 mb={6}
-                p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                p={4}
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdDevicesOther}
+                  boxSize={12}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 Lorem ipsum dolor sit amet.
               </Heading>
@@ -174,15 +202,29 @@ export default function Service(props: SectionProps) {
             borderLeft="2px solid"
           >
             <Box mb={8}>
-              <Icon
-                as={MdInsights}
-                boxSize={16}
+              <Box
                 mb={6}
-                p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                p={4}
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdInsights}
+                  boxSize={12}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 Engenharia de dados e Analytics
               </Heading>
@@ -235,15 +277,29 @@ export default function Service(props: SectionProps) {
             borderRight="2px solid"
           >
             <Box mb={8}>
-              <Icon
-                as={MdRecordVoiceOver}
-                boxSize={16}
+              <Box
                 mb={6}
-                p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                p={4}
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdRecordVoiceOver}
+                  boxSize={12}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 Cunsultoria e Treinamento
               </Heading>
@@ -294,15 +350,29 @@ export default function Service(props: SectionProps) {
             pb={0}
           >
             <Box mb={8}>
-              <Icon
-                as={MdCloudDone}
-                boxSize={16}
+              <Box
                 mb={6}
-                p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                p={4}
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdCloudDone}
+                  boxSize={12}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 DevOps e Cloud
               </Heading>
@@ -351,15 +421,29 @@ export default function Service(props: SectionProps) {
             borderLeft="2px solid"
           >
             <Box mb={8}>
-              <Icon
-                as={MdAddTask}
-                boxSize={16}
+              <Box
                 mb={6}
-                p={2}
-                border="2px solid #fe735e"
-                borderRadius="full"
-                color="currentColor"
-              />
+                p={4}
+                display="inline-block"
+                position="relative"
+                _before={{
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "2px solid #fe735e",
+                  borderRadius: "full",
+                  content: "''",
+                  position: "absolute",
+                }}
+              >
+                <Icon
+                  as={MdAddTask}
+                  boxSize={12}
+                  color="currentColor"
+                  display="block"
+                />
+              </Box>
               <Heading as="p" size="md" mb={2}>
                 Garantia e Qualidade
               </Heading>
