@@ -1,4 +1,5 @@
 import React from 'react'
+import { IconTablerDevicesExclamation, IconTablerVectorBezier } from './components/icons'
 
 export default function Home() {
   return (
@@ -17,20 +18,50 @@ export default function Home() {
               <a href='#' className='btn btn-primary'>Explore development workflow</a>
             </div>
         </div>
-        <div className='grid grid-cols-3 gap-8 '>
-          <div className='col-span-2 border rounded-3xl border-red-400'>
-            <div className='p-4 '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?</div>
+        <div className='grid grid-cols-3 gap-8'>
+          <div className='col-span-2 border rounded-3xl dark:bg-yellow-600' style={{ minHeight: '350px'}}>
+            <div className='p-8 pt-4 h-full'>
+             <div className='h-full flex flex-col gap-y-4 justify-between'>
+              <div>
+                <IconTablerDevicesExclamation className='w-24 h-24' />
+              </div>   
+              <div>
+                <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                <p className='mb-1 text-xl'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+                <p>
+                  Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                </p>
+              </div>
+              </div>
+            </div>
           </div>
-          <div className='border rounded-3xl border-blue-400'>
-            <div className='p-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A velit, vitae eligendi animi reiciendis doloribus officiis, libero autem delectus dolorem quaerat, corporis voluptate! Eos quasi praesentium saepe mollitia, atque iusto.</div>
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '350px'}}>
+            <div className='p-8 pt-4 h-full'>
+             <div className='h-full flex flex-col gap-y-4 justify-between'>
+              <div>
+                <IconTablerVectorBezier className='w-24 h-24' />
+              </div>   
+              <div>
+                <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                <p className='mb-1 text-xl'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+                <p>
+                  Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                </p>
+              </div>
+              </div>
+            </div>
           </div>
-          <div className='border rounded-3xl border-green-400'>
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}>
             <div className='p-4'>Lorem ipsum dolor sit</div>
           </div>
-          <div className='border rounded-3xl border-yellow-400'>
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}>
             <div className='p-4'>Lorem ipsum dolor sit</div>
           </div>
-          <div className='border rounded-3xl border-purple-400'>
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}>
             <div className='p-4'>Lorem ipsum dolor sit</div>
           </div>
         </div>
