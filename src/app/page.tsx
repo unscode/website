@@ -1,6 +1,7 @@
 import React from 'react'
 import { IconTablerDevicesExclamation, IconTablerVectorBezier, IconTabler3dCubeSphere, IconTablerCloudComputing } from './components/icons'
 import computer from './assets/computer-min.svg'
+import Unscode from './components/icons/Unscode'
 
 export default function Home() {
  
@@ -9,7 +10,7 @@ export default function Home() {
       <h1>Home</h1>
 
       {/* Services section */}
-      <section className='container mx-auto'>
+      <section className='container mx-auto mb-24'>
         <h3 className='mb-10 uppercase'>Services</h3>
         <div className='mb-10 flex flex-row gap-x-8 items-center'>
             <h1 className='basis-3/6 text-5xl'>Build, deploy, and manage all your apps in a secure cloud workspace.</h1>
@@ -23,9 +24,9 @@ export default function Home() {
         <div className='grid grid-cols-3 gap-8'>
 
           {/* Web development */}
-          <div className='col-span-2 border rounded-3xl dark:bg-yellow-600 service-card' style={{ backgroundColor: '#e57b61', backgroundImage: `url(${computer.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: '95% 5%', backgroundSize: 300, minHeight: '350px' }}>
-            <div className='p-8 pt-4 h-full'>
-             <div className='h-full flex flex-col gap-y-4 justify-between'>
+          <div className='col-span-2 border rounded-3xl dark:bg-yellow-600 service-card overflow-hidden'>
+            <div className='h-full' style={{backgroundImage: 'linear-gradient(to right top, #ff9640, #ff8840, #ff7943, #ff6947, #ff594c, #fe4d53, #fc405a, #f93261, #f5286b, #f11f74, #ea187e, #e31587)'}}>
+             <div className='p-8 pt-4 h-full flex flex-col gap-y-4 justify-between' style={{ backgroundImage: `url(${computer.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: '95% 10%', backgroundSize: 300, minHeight: '350px' }}>
               <div>
                 <IconTablerDevicesExclamation className='w-24 h-24 service-card-icon' />
               </div>   
@@ -98,6 +99,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer section */}
+      <footer className='container mx-auto'>
+        <div className='flex gap-12'>
+          <div>
+            <Unscode className='w-36' />
+          </div>
+          <div className='flex-1'>
+            <div className='grid grid-cols-3 gap-8'>
+              <div className='col-span-2'>
+                <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor si
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
