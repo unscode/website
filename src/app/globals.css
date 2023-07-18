@@ -25,3 +25,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.gradient {
+  background: #ffe259;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* The beauty of service section */
+
+.service-card:hover .service-card-icon {
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
+}
