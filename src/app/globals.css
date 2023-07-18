@@ -3,38 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
+  --color-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 0, 0, 0;
+    --color-rgb: 255, 255, 255;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-rgb));
+  color: rgb(var(--color-rgb));
 }
 
-.gradient {
-  background: #ffe259;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* The beauty of service section */
-
+/* The beauty of services section */
 .service-card:hover .service-card-icon {
   transform: scale(1.1);
   transition: all 1s ease-in-out;
