@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconTablerDevicesExclamation, IconTablerVectorBezier } from './components/icons'
+import { IconTablerDevicesExclamation, IconTablerVectorBezier, IconTabler3dCubeSphere, IconTablerCloudComputing } from './components/icons'
 import computer from './assets/computer-min.svg'
 
 export default function Home() {
@@ -62,10 +62,40 @@ export default function Home() {
             </div>
           </div>
 
-          
+          {/* IA */}
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}>
+            <div className='p-8 pt-4 h-full'>
+             <div className='h-full flex flex-col gap-y-4 justify-between'>
+              <div>
+                <IconTabler3dCubeSphere className='w-24 h-24 service-card-icon' />
+              </div>   
+              <div>
+                <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                <p>
+                  Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                </p>
+              </div>
+              </div>
+            </div>
+          </div>
           <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}></div>
-          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}></div>
-          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}></div>
+
+          {/* Cloud computing */}
+          <div className='border rounded-3xl dark:border-gray-800' style={{ minHeight: '300px'}}>
+             <div className='p-8 pt-4 h-full'>
+             <div className='h-full flex flex-col gap-y-4 justify-between'>
+              <div>
+                <IconTablerCloudComputing className='w-24 h-24 service-card-icon' />
+              </div>   
+              <div>
+                <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                <p>
+                  Ex eius possimus obcaecati earum debitis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                </p>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
