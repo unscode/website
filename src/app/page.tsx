@@ -2,16 +2,31 @@ import React from 'react'
 import { IconTablerDevicesExclamation, IconTablerVectorBezier, IconTabler3dCubeSphere, IconTablerCloudComputing } from './components/icons'
 import computer from './assets/computer-min.svg'
 import Unscode from './components/icons/Unscode'
+import illustration from './assets/illustration-min.svg'
+import Image from 'next/image'
 
 export default function Home() {
  
   return (
-    <main>
-      <h1>Home</h1>
+    <>
+    <header className='container mx-auto my-24'>
+      <div className='grid grid-cols-12 gap-12 items-center'>
+        <div className='col-span-5'>
+          <h1 className='text-4xl'>
+            Incidunt similique esse facere? <span className='header_text_switch text-purple-500 font-bold'></span> <br/>
+            Quis incidunt.
+          </h1>
+        </div>
+        <div className='col-span-7'>
+          <Image className='header_illustration text-red-200' src={illustration} alt='Illustration' />
+        </div>
+      </div>
+    </header>
 
+    <main>
       {/* Services section */}
-      <section className='container mx-auto mb-24'>
-        <h3 className='mb-10 uppercase'>Services</h3>
+      <section className='container mx-auto mt-24 mb-24'>
+        <h2 className='text-3xl mb-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h2>
         <div className='mb-10 flex flex-row gap-x-8 items-center'>
             <h1 className='basis-3/6 text-5xl'>Build, deploy, and manage all your apps in a secure cloud workspace.</h1>
             <div className='basis-3/6'>
@@ -24,7 +39,7 @@ export default function Home() {
         <div className='grid grid-cols-3 gap-8'>
 
           {/* Web development */}
-          <div className='col-span-2 border rounded-3xl dark:bg-yellow-600 service-card overflow-hidden'>
+          <div className='col-span-2 rounded-3xl dark:bg-yellow-600 service-card overflow-hidden'>
             <div className='h-full' style={{backgroundImage: 'linear-gradient(to right top, #ff9640, #ff8840, #ff7943, #ff6947, #ff594c, #fe4d53, #fc405a, #f93261, #f5286b, #f11f74, #ea187e, #e31587)'}}>
              <div className='p-8 pt-4 h-full flex flex-col gap-y-4 justify-between' style={{ backgroundImage: `url(${computer.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: '95% 10%', backgroundSize: 300, minHeight: '350px' }}>
               <div>
@@ -99,9 +114,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </main>
 
-      {/* Footer section */}
-      <footer className='container mx-auto'>
+    <footer className='container mx-auto'>
         <div className='flex gap-12'>
           <div>
             <Unscode className='w-36' />
@@ -120,6 +135,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </>
   )
 }
