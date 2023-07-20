@@ -32,7 +32,18 @@
   }
 }
 
+html,
 body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--background-rgb));
+  color: rgb(var(--color-rgb));
+  
+}
+
+nav {
   background-color: rgb(var(--background-rgb));
   color: rgb(var(--color-rgb));
 }
