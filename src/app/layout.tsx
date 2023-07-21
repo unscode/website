@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Unscode',
   description: 'Software development blog',
+  generator: 'Unscode Blog, software development blog',
+  category: 'Software development',
+  colorScheme: 'light dark',
   authors: {
     name: 'Unscode',
     url: 'https://unscode.com',
