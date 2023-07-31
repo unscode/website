@@ -18,8 +18,8 @@ export default function Home() {
               </div>
               <ul className='flex gap-8'>
                 <li><a href='#'>Home</a></li>
-                <li><a href='#services'>Services</a></li>
-                <li><a href='#'>Contact</a></li>
+                <li><a href='#services'>Serviços</a></li>
+                <li><a href='#'>Contato</a></li>
               </ul>
             </div>
           </div>
@@ -28,8 +28,9 @@ export default function Home() {
         <div className='grid grid-cols-12 gap-12 items-center'>
           <div className='col-span-5'>
             <h1 className='text-4xl'>
-              Incidunt similique esse facere? <span className='header_text_switch underline text-purple-500 font-bold'></span> <br/>
-              Quis incidunt.
+              Bem-vindos ao mundo a inovação e 
+eficiência tecnológica!<span className='header_text_switch underline text-purple-500 font-bold'></span> <br/>
+              
             </h1>
           </div>
           <div className='col-span-7'>
@@ -41,14 +42,14 @@ export default function Home() {
       <main>
         {/* Services section */}
         <section id='services' className='container mx-auto mt-24 mb-24'>
-          <h2 className='text-3xl mb-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h2>
+          <h2 className='text-3xl mb-12'> Tenha uma excelente experiência com otimização de custo e qualidade. </h2>
           <div className='mb-10 flex flex-row gap-x-8 items-center'>
-              <h1 className='basis-3/6 text-5xl'>Build, deploy, and manage all your apps in a secure cloud workspace.</h1>
+              <h1 className='basis-3/6 text-5xl'> soluções de software inovadoras e práticas.  </h1>
               <div className='basis-3/6'>
                 <p className='mb-4'>
-                  Spend more time on what matters. Start in seconds and scale to millions with a suite of powerful cloud tools and services for every type of app.
+                Seja qual for a sua necessidade em TI, estamos aqui para tornar sua visão uma realidade. 
                 </p>
-                <a href='#' className='btn btn-primary'>Explore development workflow</a>
+                <a href='#' className='btn btn-primary'>Veja aqui a solução para o seu segmento.</a>
               </div>
           </div>
           <div className='grid grid-cols-3 gap-8'>
@@ -61,12 +62,12 @@ export default function Home() {
                   <IconTablerDevicesExclamation className='w-24 h-24 service-card-icon' />
                 </div>   
                 <div>
-                  <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                  <h6 className='font-bold text-sm uppercase'>Conquistando o mercado de TI </h6>
                   <p className='mb-1 text-xl'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Integridade, Inovação, Qualidade, Parceria e Responsabilidade. 
                   </p>
                   <p>
-                    Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                  A Nossa paixão pela inovação e nossa busca incessante por excelência nos permitem desenvolver soluções personalizadas
                   </p>
                 </div>
                 </div>
@@ -81,12 +82,12 @@ export default function Home() {
                   <IconTablerVectorBezier className='w-24 h-24 service-card-icon' />
                 </div>   
                 <div>
-                  <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                  <h6 className='font-bold text-sm uppercase'>Desenvolvimento de software</h6>
                   <p className='mb-1 text-xl'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    
                   </p>
                   <p>
-                    Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                  Desenvolvimento personalizado de software para atender às necessidades específicas de uma empresa ou cliente. Isso inclui análise de requisitos, design, programação, testes e implementação de software.
                   </p>
                 </div>
                 </div>
@@ -101,9 +102,9 @@ export default function Home() {
                   <IconTabler3dCubeSphere className='w-24 h-24 service-card-icon' />
                 </div>   
                 <div>
-                  <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                  <h6 className='font-bold text-sm uppercase'> DevOps</h6>
                   <p>
-                    Ex eius possimus obcaecati earum debitis optio ipsum dolorum sit quidem blanditiis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                  Permite construir, implementar e gerenciar aplicativos de segurança, assim como aplicativos nativos da cloud e em múltiplos dispositivos. 
                   </p>
                 </div>
                 </div>
@@ -119,9 +120,9 @@ export default function Home() {
                   <IconTablerCloudComputing className='w-24 h-24 service-card-icon' />
                 </div>   
                 <div>
-                  <h6 className='font-bold text-sm uppercase'>Lorem ipsum dolor</h6>
+                  <h6 className='font-bold text-sm uppercase'>Serviços em Nuvem</h6>
                   <p>
-                    Ex eius possimus obcaecati earum debitis vitae accusantium saepe ut voluptatibus laboriosam, eligendi magni quae harum?
+                  Oferecem hospedagem de sites e aplicativos, bem como serviços em nuvem, permitindo que as empresas acessem recursos de computação e armazenamento sob demanda.
                   </p>
                 </div>
                 </div>
