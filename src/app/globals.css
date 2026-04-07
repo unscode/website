@@ -43,6 +43,13 @@ body {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background-color: rgb(var(--background-rgb));
   color: rgb(var(--color-rgb));
@@ -125,4 +132,11 @@ nav {
 .service-card:hover .service-card-icon,
 .service-card:focus-within .service-card-icon {
   transform: scale(1.08) translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card:hover .service-card-icon,
+  .service-card:focus-within .service-card-icon {
+    transform: none;
+  }
 }

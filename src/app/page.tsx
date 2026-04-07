@@ -91,8 +91,13 @@ export default function Home() {
                 Unscode — desenvolvimento de software
               </p>
               <h1 className='text-balance text-xl font-semibold leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.08]'>
-                Criamos <HeaderRotatingPhrase />{' '}
-                com engenharia, clareza e parceria de longo prazo.
+                <span className='sr-only'>
+                  Criamos produtos digitais, aplicações na nuvem, software sob medida e integrações robustas, com
+                  engenharia, clareza e parceria de longo prazo.
+                </span>
+                <span aria-hidden='true'>
+                  Criamos <HeaderRotatingPhrase /> com engenharia, clareza e parceria de longo prazo.
+                </span>
               </h1>
               <p className='max-w-xl border-l-2 border-neutral-500/28 pl-5 text-lg leading-relaxed text-black/75 dark:border-neutral-400/32 dark:text-white/75'>
                 Ajudamos empresas e equipes de produto a criar e manter software na web e na nuvem — com arquitetura clara, código legível e entregas frequentes, para ir ao ar rápido e crescer com menos retrabalho.
@@ -138,8 +143,12 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
-        <section id='services' className='container mx-auto mb-24 mt-24 scroll-mt-24'>
+      <main id='main-content' tabIndex={-1}>
+        <section
+          id='services'
+          className='container mx-auto mb-24 mt-24 scroll-mt-24'
+          aria-labelledby='services-heading'
+        >
           <ServicesReveal>
             <div
               className='services-stagger-item mb-12 flex flex-col gap-8 lg:mb-16 lg:flex-row lg:items-end lg:gap-12'
@@ -149,7 +158,10 @@ export default function Home() {
                 <p className='mb-3 text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400'>
                   O que fazemos
                 </p>
-                <h2 className='text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl lg:leading-tight'>
+                <h2
+                  id='services-heading'
+                  className='text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl lg:leading-tight'
+                >
                   Do planeamento ao deploy, com um parceiro técnico alinhado ao seu produto.
                 </h2>
               </div>
@@ -188,7 +200,10 @@ export default function Home() {
                     }}
                   >
                     <div className='service-card-icon-wrap inline-flex rounded-2xl bg-white/15 p-4 ring-1 ring-white/30 backdrop-blur-sm transition duration-500 group-hover:bg-white/25'>
-                      <IconTablerDevicesExclamation className='service-card-icon h-16 w-16 sm:h-20 sm:w-20' />
+                      <IconTablerDevicesExclamation
+                        className='service-card-icon h-16 w-16 sm:h-20 sm:w-20'
+                        aria-hidden
+                      />
                     </div>
                     <div className='max-w-lg'>
                       <h3 className='text-xs font-bold uppercase tracking-wider text-white/90'>Engenharia de produto</h3>
@@ -207,7 +222,10 @@ export default function Home() {
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
                   <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
-                    <IconTablerVectorBezier className='service-card-icon h-16 w-16 sm:h-20 sm:w-20' />
+                    <IconTablerVectorBezier
+                      className='service-card-icon h-16 w-16 sm:h-20 sm:w-20'
+                      aria-hidden
+                    />
                   </div>
                   <div>
                     <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>UX / UI</h3>
@@ -225,7 +243,10 @@ export default function Home() {
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
                   <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
-                    <IconTabler3dCubeSphere className='service-card-icon h-14 w-14 sm:h-16 sm:w-16' />
+                    <IconTabler3dCubeSphere
+                      className='service-card-icon h-14 w-14 sm:h-16 sm:w-16'
+                      aria-hidden
+                    />
                   </div>
                   <div>
                     <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Dados &amp; automação</h3>
@@ -265,7 +286,14 @@ export default function Home() {
                     className='inline-flex w-fit items-center gap-2 text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300'
                   >
                     Agendar conversa
-                    <svg className='h-4 w-4 transition-transform group-hover:translate-x-0.5' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
+                    <svg
+                      className='h-4 w-4 transition-transform group-hover:translate-x-0.5'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                      strokeWidth={2}
+                      aria-hidden
+                    >
                       <path strokeLinecap='round' strokeLinejoin='round' d='M17 8l4 4m0 0l-4 4m4-4H3' />
                     </svg>
                   </a>
@@ -278,7 +306,10 @@ export default function Home() {
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
                   <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
-                    <IconTablerCloudComputing className='service-card-icon h-14 w-14 sm:h-16 sm:w-16' />
+                    <IconTablerCloudComputing
+                      className='service-card-icon h-14 w-14 sm:h-16 sm:w-16'
+                      aria-hidden
+                    />
                   </div>
                   <div>
                     <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Cloud &amp; DevOps</h3>
@@ -345,7 +376,12 @@ export default function Home() {
           </div>
 
           <div className='sm:col-span-2 lg:col-span-4'>
-            <h2 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Contato</h2>
+            <h2
+              id='contact-heading'
+              className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'
+            >
+              Contato
+            </h2>
             <ul className='mt-4 flex list-none flex-col gap-4 text-sm'>
               <li>
                 <a
@@ -356,7 +392,14 @@ export default function Home() {
                     className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-neutral-600/10 text-neutral-600 ring-1 ring-neutral-500/12 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'
                     aria-hidden
                   >
-                    <svg className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
+                    <svg
+                      className='h-4 w-4'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                      strokeWidth={2}
+                      aria-hidden
+                    >
                       <path
                         strokeLinecap='round'
                         strokeLinejoin='round'
@@ -379,11 +422,19 @@ export default function Home() {
                   rel='noopener noreferrer'
                   className='group inline-flex items-start gap-3 rounded-lg text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                 >
+                  <span className='sr-only'>Abre em nova aba. </span>
                   <span
                     className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-neutral-600/10 text-neutral-600 ring-1 ring-neutral-500/12 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'
                     aria-hidden
                   >
-                    <svg className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
+                    <svg
+                      className='h-4 w-4'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                      strokeWidth={2}
+                      aria-hidden
+                    >
                       <path
                         strokeLinecap='round'
                         strokeLinejoin='round'
