@@ -1,0 +1,31 @@
+---
+description: Next.js App Router, React, and TypeScript conventions for this repo
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js, React, TypeScript
+
+## App Router
+
+- Use the **App Router** (`src/app/`): `layout.tsx`, `page.tsx`, route segments, `metadata` export where appropriate.
+- Prefer **Server Components** by default. Add `'use client'` only when you need browser APIs, event handlers, or client-only hooks.
+
+## React
+
+- Use **function components**. Keep pages and sections readable; extract components when a block grows or repeats.
+- Set meaningful **`alt` (and `title` when useful)** on `next/image` and other images.
+
+## TypeScript
+
+- Respect **`strict`** typing; avoid `any` unless there is a documented reason.
+- Type props explicitly for new components; align with how sibling files in `src/app/` declare types.
+
+## Styling
+
+- Use **Tailwind** utility classes consistent with nearby markup (spacing, typography, layout).
+- Prefer `next/image` for images over raw `<img>` when using static imports or remote URLs configured in Next.
+
+## Icons
+
+- SVG/icon components live under `src/app/components/icons/`; re-export from `index.ts` when adding new icons to match the existing barrel pattern.

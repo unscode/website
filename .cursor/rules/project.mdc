@@ -1,0 +1,27 @@
+---
+description: Unscode website — stack, layout, and general working agreements
+alwaysApply: true
+---
+
+# Unscode website
+
+Marketing / landing site for **Unscode** (software development). Default UI language and `html` locale are Portuguese (`pt-br`); match existing copy tone when editing content.
+
+## Stack
+
+- **Next.js** (App Router) under `src/app/`
+- **React 18** and **TypeScript** (`strict` in `tsconfig.json`)
+- **Tailwind CSS** for styling (`tailwind.config.js`, `globals.css`)
+- Path alias: `@/*` → `./src/*` (prefer `@/` for imports from `src`)
+
+## Repository layout
+
+- `src/app/` — routes, `layout.tsx`, `page.tsx`, `globals.css`, assets, components
+- Shared UI lives under `src/app/components/` (e.g. icons in `components/icons/`)
+- Root config: `next.config.js`, `postcss.config.js`, `tailwind.config.js`, `.eslintrc.json`
+
+## How to change the codebase
+
+- Keep edits scoped to the task; avoid unrelated refactors or new docs unless requested.
+- Follow patterns already in the file you touch (quotes, component style, Tailwind class style).
+- Run `npm run lint` after substantive changes when relevant.
