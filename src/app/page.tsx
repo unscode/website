@@ -2,10 +2,10 @@ import React, { type CSSProperties } from 'react'
 import { IconTablerDevicesExclamation, IconTablerVectorBezier, IconTabler3dCubeSphere, IconTablerCloudComputing } from './components/icons'
 import computer from './assets/computer-min.svg'
 import Unscode from './components/icons/Unscode'
-import illustration from './assets/illustration-min.svg'
-import Image from 'next/image'
 import { HeaderRotatingPhrase } from './components/HeaderRotatingPhrase'
 import { ServicesReveal } from './components/ServicesReveal'
+import illustration from './assets/illustration-min.svg'
+import Image from 'next/image'
 
 const servicesStagger = (ms: number): CSSProperties => ({
   ['--services-stagger' as string]: `${ms}ms`,
@@ -14,7 +14,7 @@ const servicesStagger = (ms: number): CSSProperties => ({
 function ServiceStepCheck() {
   return (
     <span
-      className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600/15 text-purple-600 ring-1 ring-purple-500/20 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/25'
+      className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-600/12 text-neutral-600 ring-1 ring-neutral-500/18 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/22'
       aria-hidden
     >
       <svg className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2.25}>
@@ -28,84 +28,111 @@ export default function Home() {
 
   return (
     <>
-      <header className='container mx-auto mb-24 pt-20'>
+      <header className='relative mb-24 overflow-hidden pt-20'>
+        <div
+          className='pointer-events-none absolute -right-[20%] -top-24 h-[min(32rem,90vw)] w-[min(32rem,90vw)] rounded-full bg-neutral-500/[0.1] blur-[100px] dark:bg-neutral-500/[0.12]'
+          aria-hidden
+        />
+        <div
+          className='pointer-events-none absolute -left-[10%] top-[28%] h-[min(18rem,55vw)] w-[min(18rem,55vw)] rounded-full bg-neutral-400/[0.09] blur-[90px] dark:bg-neutral-500/[0.08]'
+          aria-hidden
+        />
+        <div
+          className='pointer-events-none absolute bottom-0 left-1/2 h-px w-[min(100%,48rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-400/18 to-transparent dark:via-neutral-500/14'
+          aria-hidden
+        />
+
         <nav
-          className='fixed inset-x-0 top-0 z-50 border-b border-black/[0.06] dark:border-white/[0.08]'
+          className='fixed inset-x-0 top-0 z-50 border-b border-black/[0.06] bg-[rgb(var(--background-rgb))]/80 backdrop-blur-xl backdrop-saturate-150 dark:border-white/[0.08] dark:bg-[rgb(var(--background-rgb))]/75'
           aria-label='Principal'
         >
-          <div className='container flex h-16 items-center justify-between'>
+          <div className='container flex h-[4.25rem] items-center justify-between'>
             <a
               href='/'
-              className='flex shrink-0 items-center rounded outline-none ring-purple-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-opacity hover:opacity-90 focus-visible:ring-2'
+              className='flex shrink-0 items-center rounded-lg outline-none ring-neutral-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-opacity hover:opacity-90 focus-visible:ring-2'
             >
-              <Unscode className='w-24' aria-hidden />
+              <Unscode className='w-[5.5rem]' aria-hidden />
               <span className='sr-only'>Unscode — início</span>
             </a>
-            <ul className='flex list-none items-center gap-6 md:gap-8'>
+            <ul className='flex list-none items-center gap-1 sm:gap-2'>
               <li>
                 <a
-                  className='rounded text-sm font-medium outline-none ring-purple-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:text-purple-500 focus-visible:ring-2'
+                  className='rounded-lg px-3 py-2 text-sm font-medium text-black/80 outline-none ring-neutral-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:bg-black/[0.04] hover:text-neutral-700 focus-visible:ring-2 dark:text-white/85 dark:hover:bg-white/[0.06] dark:hover:text-neutral-300'
                   href='/'
                 >
-                  Home
+                  Início
                 </a>
               </li>
               <li>
                 <a
-                  className='rounded text-sm font-medium outline-none ring-purple-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:text-purple-500 focus-visible:ring-2'
+                  className='rounded-lg px-3 py-2 text-sm font-medium text-black/80 outline-none ring-neutral-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:bg-black/[0.04] hover:text-neutral-700 focus-visible:ring-2 dark:text-white/85 dark:hover:bg-white/[0.06] dark:hover:text-neutral-300'
                   href='#services'
                 >
-                  Services
+                  Serviços
                 </a>
               </li>
               <li>
                 <a
-                  className='rounded text-sm font-medium outline-none ring-purple-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:text-purple-500 focus-visible:ring-2'
+                  className='rounded-lg px-3 py-2 text-sm font-medium text-black/80 outline-none ring-neutral-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-colors hover:bg-black/[0.04] hover:text-neutral-700 focus-visible:ring-2 dark:text-white/85 dark:hover:bg-white/[0.06] dark:hover:text-neutral-300'
                   href='#contact'
                 >
-                  Contact
+                  Contato
                 </a>
               </li>
             </ul>
           </div>
         </nav>
 
-        <div className='grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14'>
-          <div className='space-y-6 lg:col-span-5'>
-            <p className='text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400'>
-              Unscode — desenvolvimento de software
-            </p>
-            <h1 className='text-balance text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]'>
-              Criamos <HeaderRotatingPhrase />{' '}
-              com engenharia, clareza e parceria de longo prazo.
-            </h1>
-            <p className='max-w-xl text-lg leading-relaxed text-black/75 dark:text-white/75'>
-              A Unscode apoia empresas e equipes de produto a desenhar, construir e operar soluções web e serviços na nuvem. Trabalhamos com arquitetura sustentável, código legível e entregas iterativas — para lançar mais rápido, escalar com segurança e reduzir dívida técnica ao longo do tempo.
-            </p>
-            <div className='flex flex-wrap gap-3 pt-1'>
-              <a
-                href='#services'
-                className='inline-flex items-center justify-center rounded-lg bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:hover:bg-purple-500'
-              >
-                Conheça os serviços
-              </a>
-              <a
-                href='#contact'
-                className='inline-flex items-center justify-center rounded-lg border border-black/15 px-5 py-2.5 text-sm font-semibold transition-colors hover:border-purple-500 hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:border-white/20 dark:hover:border-purple-400 dark:hover:text-purple-400'
-              >
-                Fale conosco
-              </a>
+        <div className='container relative mx-auto'>
+          <div className='grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16'>
+            <div className='header-hero-animate space-y-6 lg:col-span-5 lg:space-y-7'>
+              <p className='inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400'>
+                <span className='h-1.5 w-1.5 rounded-full bg-neutral-500 dark:bg-neutral-400' aria-hidden />
+                Unscode — desenvolvimento de software
+              </p>
+              <h1 className='text-balance text-xl font-semibold leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.08]'>
+                Criamos <HeaderRotatingPhrase />{' '}
+                com engenharia, clareza e parceria de longo prazo.
+              </h1>
+              <p className='max-w-xl border-l-2 border-neutral-500/28 pl-5 text-lg leading-relaxed text-black/75 dark:border-neutral-400/32 dark:text-white/75'>
+                Ajudamos empresas e equipes de produto a criar e manter software na web e na nuvem — com arquitetura clara, código legível e entregas frequentes, para ir ao ar rápido e crescer com menos retrabalho.
+              </p>
+              <div className='flex flex-wrap gap-3 pt-1'>
+                <a
+                  href='#services'
+                  className='inline-flex items-center justify-center rounded-xl bg-neutral-800 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-neutral-900/20 transition-all hover:bg-neutral-900 hover:shadow-neutral-900/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:hover:bg-neutral-600 dark:shadow-black/25'
+                >
+                  Conheça os serviços
+                </a>
+                <a
+                  href='#contact'
+                  className='inline-flex items-center justify-center rounded-xl border border-black/15 bg-black/[0.02] px-6 py-3 text-sm font-semibold transition-all hover:border-neutral-500/40 hover:bg-neutral-600/[0.08] hover:text-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:border-white/20 dark:bg-white/[0.03] dark:hover:border-neutral-500/35 dark:hover:text-neutral-300'
+                >
+                  Fale conosco
+                </a>
+              </div>
             </div>
-          </div>
-          <div className='lg:col-span-7'>
-            <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500/[0.12] via-transparent to-orange-400/[0.1] p-px ring-1 ring-black/[0.06] dark:from-purple-400/15 dark:to-orange-400/10 dark:ring-white/[0.08]'>
-              <Image
-                priority
-                className='header_illustration rounded-[1.4rem]'
-                src={illustration}
-                alt='Ilustração de equipe desenvolvendo software e infraestrutura na nuvem'
-                title='Unscode — engenharia de software'
+
+            <div className='relative flex justify-center lg:col-span-7 lg:justify-end'>
+              <div
+                className='pointer-events-none absolute right-[-5%] top-[2%] h-44 w-44 rounded-full bg-neutral-400/[0.1] blur-3xl dark:bg-neutral-500/[0.12]'
+                aria-hidden
               />
+              <div
+                className='pointer-events-none absolute bottom-[8%] left-[-2%] h-36 w-36 rounded-full bg-neutral-400/[0.08] blur-3xl dark:bg-neutral-400/[0.08]'
+                aria-hidden
+              />
+              <div className='relative w-full lg:w-[min(100%,40rem)]'>
+                <div className='relative aspect-[440/280] w-full'>
+                  <Image
+                    fill
+                    className='object-cover'
+                    src={illustration}
+                    alt='Ilustração de equipe desenvolvendo software e infraestrutura na nuvem'
+                    sizes='(max-width: 1024px) 100vw, 40rem'
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -119,7 +146,7 @@ export default function Home() {
               style={servicesStagger(0)}
             >
               <div className='lg:max-w-xl lg:flex-1'>
-                <p className='mb-3 text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400'>
+                <p className='mb-3 text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400'>
                   O que fazemos
                 </p>
                 <h2 className='text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl lg:leading-tight'>
@@ -132,7 +159,7 @@ export default function Home() {
                 </p>
                 <a
                   href='#contact'
-                  className='inline-flex items-center justify-center rounded-lg bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:hover:bg-purple-500'
+                  className='inline-flex items-center justify-center rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(var(--background-rgb))] dark:hover:bg-neutral-600'
                 >
                   Fale conosco
                 </a>
@@ -148,7 +175,7 @@ export default function Home() {
                   className='h-full min-h-[22rem]'
                   style={{
                     backgroundImage:
-                      'linear-gradient(to right top, #ff9640, #ff8840, #ff7943, #ff6947, #ff594c, #fe4d53, #fc405a, #f93261, #f5286b, #f11f74, #ea187e, #e31587)',
+                      'linear-gradient(to right top, #27272a, #3f3f46, #52525b, #3f3f46, #27272a)',
                   }}
                 >
                   <div
@@ -175,15 +202,15 @@ export default function Home() {
               </article>
 
               <article
-                className='service-card group services-stagger-item flex min-h-[22rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-purple-500/35 hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-purple-400/40'
+                className='service-card group services-stagger-item flex min-h-[22rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-neutral-500/28 hover:shadow-lg hover:shadow-neutral-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-neutral-400/32'
                 style={servicesStagger(160)}
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
-                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-purple-600/12 p-4 text-purple-600 ring-1 ring-purple-500/15 transition duration-300 group-hover:bg-purple-600/18 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/20'>
+                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
                     <IconTablerVectorBezier className='service-card-icon h-16 w-16 sm:h-20 sm:w-20' />
                   </div>
                   <div>
-                    <h3 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>UX / UI</h3>
+                    <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>UX / UI</h3>
                     <p className='mt-2 text-xl font-semibold leading-snug sm:text-2xl'>Experiência e interface</p>
                     <p className='mt-3 text-base leading-relaxed text-black/75 dark:text-white/75'>
                       Fluxos claros, protótipos e sistemas de design que mantêm a marca consistente enquanto o produto cresce.
@@ -193,15 +220,15 @@ export default function Home() {
               </article>
 
               <article
-                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-purple-500/35 hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-purple-400/40'
+                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-neutral-500/28 hover:shadow-lg hover:shadow-neutral-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-neutral-400/32'
                 style={servicesStagger(230)}
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
-                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-purple-600/12 p-4 text-purple-600 ring-1 ring-purple-500/15 transition duration-300 group-hover:bg-purple-600/18 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/20'>
+                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
                     <IconTabler3dCubeSphere className='service-card-icon h-14 w-14 sm:h-16 sm:w-16' />
                   </div>
                   <div>
-                    <h3 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>Dados &amp; automação</h3>
+                    <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Dados &amp; automação</h3>
                     <p className='mt-2 text-xl font-semibold leading-snug'>Modelos e pipelines</p>
                     <p className='mt-3 text-base leading-relaxed text-black/75 dark:text-white/75'>
                       ETL, APIs de dados e automações que ligam equipes e reduzem trabalho manual repetitivo.
@@ -211,12 +238,12 @@ export default function Home() {
               </article>
 
               <article
-                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-gradient-to-br from-purple-600/[0.07] to-transparent transition-all duration-300 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 dark:from-purple-400/10 dark:hover:border-purple-400/45'
+                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-gradient-to-br from-neutral-600/[0.06] to-transparent transition-all duration-300 hover:border-neutral-500/32 hover:shadow-lg hover:shadow-neutral-500/8 dark:from-neutral-400/[0.08] dark:hover:border-neutral-400/35'
                 style={servicesStagger(300)}
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
                   <div className='flex flex-col gap-4'>
-                    <h3 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>Como trabalhamos</h3>
+                    <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Como trabalhamos</h3>
                     <p className='text-xl font-semibold leading-snug'>Da ideia à produção</p>
                     <ul className='space-y-4 text-base leading-relaxed text-black/80 dark:text-white/80'>
                       <li className='flex gap-3'>
@@ -235,7 +262,7 @@ export default function Home() {
                   </div>
                   <a
                     href='#contact'
-                    className='inline-flex w-fit items-center gap-2 text-sm font-semibold text-purple-600 transition-colors hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300'
+                    className='inline-flex w-fit items-center gap-2 text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300'
                   >
                     Agendar conversa
                     <svg className='h-4 w-4 transition-transform group-hover:translate-x-0.5' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
@@ -246,15 +273,15 @@ export default function Home() {
               </article>
 
               <article
-                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-purple-500/35 hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-purple-400/40'
+                className='service-card group services-stagger-item flex min-h-[17rem] flex-col rounded-3xl border border-black/[0.08] bg-black/[0.02] transition-all duration-300 hover:border-neutral-500/28 hover:shadow-lg hover:shadow-neutral-500/5 dark:border-white/[0.1] dark:bg-white/[0.03] dark:hover:border-neutral-400/32'
                 style={servicesStagger(370)}
               >
                 <div className='flex h-full flex-col justify-between gap-6 p-8 pt-6'>
-                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-purple-600/12 p-4 text-purple-600 ring-1 ring-purple-500/15 transition duration-300 group-hover:bg-purple-600/18 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/20'>
+                  <div className='service-card-icon-wrap inline-flex rounded-2xl bg-neutral-600/10 p-4 text-neutral-600 ring-1 ring-neutral-500/12 transition duration-300 group-hover:bg-neutral-600/15 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'>
                     <IconTablerCloudComputing className='service-card-icon h-14 w-14 sm:h-16 sm:w-16' />
                   </div>
                   <div>
-                    <h3 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>Cloud &amp; DevOps</h3>
+                    <h3 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Cloud &amp; DevOps</h3>
                     <p className='mt-2 text-xl font-semibold leading-snug'>Infra observável</p>
                     <p className='mt-3 text-base leading-relaxed text-black/75 dark:text-white/75'>
                       Contentores, ambientes por estágio, backups e alertas — para dormir descansado quando o tráfego dispara.
@@ -275,7 +302,7 @@ export default function Home() {
           <div className='lg:col-span-5'>
             <a
               href='/'
-              className='inline-block rounded outline-none ring-purple-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-opacity hover:opacity-90 focus-visible:ring-2'
+              className='inline-block rounded outline-none ring-neutral-500 ring-offset-2 ring-offset-[rgb(var(--background-rgb))] transition-opacity hover:opacity-90 focus-visible:ring-2'
             >
               <Unscode className='w-36' aria-hidden />
               <span className='sr-only'>Unscode — início</span>
@@ -286,12 +313,12 @@ export default function Home() {
           </div>
 
           <div className='lg:col-span-3'>
-            <h2 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>Navegação</h2>
+            <h2 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Navegação</h2>
             <nav className='mt-4' aria-label='Rodapé'>
               <ul className='flex list-none flex-col gap-3 text-sm font-medium'>
                 <li>
                   <a
-                    className='rounded text-black/80 transition-colors hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 dark:text-white/80 dark:hover:text-purple-400'
+                    className='rounded text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                     href='/'
                   >
                     Início
@@ -299,7 +326,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    className='rounded text-black/80 transition-colors hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 dark:text-white/80 dark:hover:text-purple-400'
+                    className='rounded text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                     href='#services'
                   >
                     Serviços
@@ -307,7 +334,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    className='rounded text-black/80 transition-colors hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 dark:text-white/80 dark:hover:text-purple-400'
+                    className='rounded text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                     href='#contact'
                   >
                     Contato
@@ -318,15 +345,15 @@ export default function Home() {
           </div>
 
           <div className='sm:col-span-2 lg:col-span-4'>
-            <h2 className='text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400'>Contato</h2>
+            <h2 className='text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400'>Contato</h2>
             <ul className='mt-4 flex list-none flex-col gap-4 text-sm'>
               <li>
                 <a
                   href='mailto:contato@unscode.com'
-                  className='group inline-flex items-start gap-3 rounded-lg text-black/80 transition-colors hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 dark:text-white/80 dark:hover:text-purple-400'
+                  className='group inline-flex items-start gap-3 rounded-lg text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                 >
                   <span
-                    className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-purple-600/10 text-purple-600 ring-1 ring-purple-500/15 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/20'
+                    className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-neutral-600/10 text-neutral-600 ring-1 ring-neutral-500/12 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'
                     aria-hidden
                   >
                     <svg className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
@@ -339,7 +366,7 @@ export default function Home() {
                   </span>
                   <span>
                     <span className='block font-semibold text-black dark:text-white'>Email</span>
-                    <span className='text-black/70 group-hover:text-purple-600 dark:text-white/70 dark:group-hover:text-purple-400'>
+                    <span className='text-black/70 group-hover:text-neutral-700 dark:text-white/70 dark:group-hover:text-neutral-300'>
                       contato@unscode.com
                     </span>
                   </span>
@@ -350,10 +377,10 @@ export default function Home() {
                   href='https://unscode.com'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='group inline-flex items-start gap-3 rounded-lg text-black/80 transition-colors hover:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 dark:text-white/80 dark:hover:text-purple-400'
+                  className='group inline-flex items-start gap-3 rounded-lg text-black/80 transition-colors hover:text-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 dark:text-white/80 dark:hover:text-neutral-300'
                 >
                   <span
-                    className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-purple-600/10 text-purple-600 ring-1 ring-purple-500/15 dark:bg-purple-400/15 dark:text-purple-300 dark:ring-purple-400/20'
+                    className='mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-neutral-600/10 text-neutral-600 ring-1 ring-neutral-500/12 dark:bg-neutral-400/12 dark:text-neutral-300 dark:ring-neutral-400/18'
                     aria-hidden
                   >
                     <svg className='h-4 w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth={2}>
@@ -366,7 +393,7 @@ export default function Home() {
                   </span>
                   <span>
                     <span className='block font-semibold text-black dark:text-white'>Web</span>
-                    <span className='text-black/70 group-hover:text-purple-600 dark:text-white/70 dark:group-hover:text-purple-400'>
+                    <span className='text-black/70 group-hover:text-neutral-700 dark:text-white/70 dark:group-hover:text-neutral-300'>
                       unscode.com
                     </span>
                   </span>
